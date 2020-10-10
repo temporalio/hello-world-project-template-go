@@ -1,4 +1,4 @@
-// @@@SNIPSTART hello-world-project-template-workflow-test
+// @@@SNIPSTART hello-world-project-template-go-workflow-test
 package app
 
 import (
