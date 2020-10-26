@@ -13,9 +13,8 @@ func Test_Workflow(t *testing.T) {
 	testSuite := &testsuite.WorkflowTestSuite{}
 	env := testSuite.NewTestWorkflowEnvironment()
 	// Mock activity implementation
-	name := "World!"
-	env.OnActivity(ComposeGreeting, mock.Anything, name).Return(nil)
-	env.ExecuteWorkflow(GreetingWorkflow, name)
+	env.OnActivity(ComposeGreeting, mock.Anything).Return("Hello World!", nil)
+	env.ExecuteWorkflow(GreetingWorkflow, "World")
 	require.True(t, env.IsWorkflowCompleted())
 	require.NoError(t, env.GetWorkflowError())
 	var greeting string
