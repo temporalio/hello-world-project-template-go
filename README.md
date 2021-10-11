@@ -23,6 +23,7 @@ You can now view Temporal Web at http://localhost:8088.
 3. Run the worker and starter included in the project.
 
 ```bash
+go mod tidy
 go run worker/main.go
 go run start/main.go
 ```
