@@ -4,11 +4,10 @@ package main
 import (
 	"context"
 	"fmt"
+	"hello-world-temporal/app"
 	"log"
 
 	"go.temporal.io/sdk/client"
-
-	"hello-world-project-template-go/app"
 )
 
 func main() {

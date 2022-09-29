@@ -2,12 +2,11 @@
 package main
 
 import (
+	"hello-world-temporal/app"
 	"log"
 
 	"go.temporal.io/sdk/client"
 	"go.temporal.io/sdk/worker"
-
-	"hello-world-project-template-go/app"
 )
 
 func main() {
