@@ -15,7 +15,7 @@ func Test_Workflow(t *testing.T) {
 	env := testSuite.NewTestWorkflowEnvironment()
 
 	// Mock activity implementation
-	env.OnActivity(ComposeGreeting, mock.Anything).Return("Hello World!", nil)
+	env.OnActivity(ComposeGreeting, mock.Anything, "World").Return("Hello World!", nil)
 
 	env.ExecuteWorkflow(GreetingWorkflow, "World")
 	require.True(t, env.IsWorkflowCompleted())
