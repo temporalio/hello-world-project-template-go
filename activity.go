@@ -2,11 +2,13 @@
 package app
 
 import (
+	"context"
 	"fmt"
 )
 
-func ComposeGreeting(name string) (string, error) {
+func ComposeGreeting(ctx context.Context, name string) (string, error) {
 	greeting := fmt.Sprintf("Hello %s!", name)
 	return greeting, nil
 }
+
 // @@@SNIPEND
