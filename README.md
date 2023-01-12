@@ -12,12 +12,12 @@ Clone this repository:
 git clone https://github.com/temporalio/hello-world-project-template-go
 ```
 
-[Install and run the Temporal Server]((https://docs.temporal.io/docs/server/quick-install) using `docker compose`.
+[Install and run the Temporal Server](https://docs.temporal.io/docs/server/quick-install) using `docker compose`.
 
 ```bash
 git clone https://github.com/temporalio/docker-compose.git
 cd docker-compose
-docker-compose up
+docker compose up
 ```
 
 You can now view Temporal Web at <http://localhost:8080>.
