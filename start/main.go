@@ -13,7 +13,7 @@ import (
 func main() {
 
 	// Create the client object just once per process
-	c, err := client.Dial(client.Options{})
+	c, err := app.ClientDial()
 	if err != nil {
 		log.Fatalln("unable to create Temporal client", err)
 	}
