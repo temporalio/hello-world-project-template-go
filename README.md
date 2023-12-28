@@ -4,25 +4,27 @@ This is the Hello World project which has all the basic files explained in our [
 
 ## Instructions
 
-Ensure you have Go 1.16 or later installed locally, and that you have Docker installed to run the Temporal Cluster.
+Ensure you have Go 1.16 or later installed locally, and access to a Temporal Cluster for development.
 
-Clone this repository:
+The fastest way to get a development cluster running on your local machine is to use [Temporal CLI](https://docs.temporal.io/cli#install).
+
+Temporal CLI is a tool for interacting with a Temporal Cluster from the command-line interface. It includes a self-contained distribution of the Temporal Server and [Web UI](https://docs.temporal.io/web-ui) as well.
+
+Once you've installed Temporal CLI on your platform of choice and added it to your ```PATH```, open a new Terminal window and run the following command:
+
+```temporal server start-dev```
+
+*  The Temporal Server will be available on ```localhost:7233```.
+*  The Temporal Web UI will be available at ```http://localhost:8233```.
+
+Next, clone this repository and switch to the cloned directory:
 
 ```bash
 git clone https://github.com/temporalio/hello-world-project-template-go
+cd hello-world-project-template-go
 ```
 
-[Install and run the Temporal Server](https://docs.temporal.io/docs/server/quick-install) using `docker compose`.
-
-```bash
-git clone https://github.com/temporalio/docker-compose.git
-cd docker-compose
-docker compose up
-```
-
-You can now view Temporal Web at <http://localhost:8080>.
-
-Run the worker and starter included in the project.
+Now you can run the worker and starter included in the project.
 
 ```bash
 go run worker/main.go
